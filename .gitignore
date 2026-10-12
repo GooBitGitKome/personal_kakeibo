@@ -1,0 +1,118 @@
+# =============================================================================
+# OutdoorCast Monorepo .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Environment & Secrets (機密情報・環境変数)
+# -----------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+
+# -----------------------------------------------------------------------------
+# Node.js & Frontend (JavaScript / TypeScript / Vite)
+# -----------------------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+dist-ssr/
+frontend/dist-ssr/
+*.local
+
+# npm / yarn / pnpm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Vite & Vitest / Playwright test results
+.cache/
+.vite/
+frontend/.vite/
+playwright-report/
+test-results/
+
+# -----------------------------------------------------------------------------
+# Python & Backend (FastAPI / Pytest)
+# -----------------------------------------------------------------------------
+__pycache__/
+*/__pycache__/
+*/**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environments
+.venv/
+backend/.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Pytest / Coverage / Linting
+.pytest_cache/
+backend/.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# -----------------------------------------------------------------------------
+# Mobile Native Builds (Capacitor iOS & Android)
+# -----------------------------------------------------------------------------
+# iOS
+**/ios/App/Pods/
+**/ios/App/Podfile.lock
+**/ios/App/build/
+**/ios/App/DerivedData/
+
+# Android
+**/android/.gradle/
+**/android/build/
+**/android/app/build/
+**/android/local.properties
+**/android/.idea/
+*.keystore
+
+# -----------------------------------------------------------------------------
+# Cloudflare & Deployment Artifacts
+# -----------------------------------------------------------------------------
+.wrangler/
+frontend/.wrangler/
+.cloudflare/
+
+# -----------------------------------------------------------------------------
+# Archives & Compressed Files (アーカイブ・一時バイナリ)
+# -----------------------------------------------------------------------------
+*.tar.gz
+*.tar
+*.zip
+*.gz
+*.rar
+*.7z
+
+# -----------------------------------------------------------------------------
+# Operating System & Editors (OS・エディタ一時ファイル)
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.sublime-workspace
+*.swp
+*.swo
+*~
